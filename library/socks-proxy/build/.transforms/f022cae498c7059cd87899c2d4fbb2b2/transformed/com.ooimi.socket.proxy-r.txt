@@ -1,0 +1,3 @@
+com.ooimi.socket.proxy
+string pdnsd_conf
+style TranslucentStyle

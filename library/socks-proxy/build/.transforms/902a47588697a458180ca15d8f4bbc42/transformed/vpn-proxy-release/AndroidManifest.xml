@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ooimi.socket.proxy" >
+
+    <uses-sdk android:minSdkVersion="21" />
+
+    <application>
+        <service
+            android:name="com.ooimi.socket.proxy.service.SocksVpnService"
+            android:exported="false"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:process=":socks_proxy" >
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.ooimi.socket.proxy.broadcast.SocksProxyStatusBroadcast"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 下面的action配置需要与客户端发送广播的action保持一致 -->
+                <action android:name="com.ooimi.socket.proxy.status" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ooimi.socket.proxy.page.VPNPermissionRequestActivity"
+            android:exported="false"
+            android:theme="@style/TranslucentStyle" />
+    </application>
+
+</manifest>

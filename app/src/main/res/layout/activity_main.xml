@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="Socks5 Proxy"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/serviceAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入服务器地址"
+        android:inputType="numberDecimal"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/servicePort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入服务器端口"
+        android:inputType="number"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入用户名"
+        android:inputType="text"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:text="" />
+
+    <Button
+        android:id="@+id/startVpn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="开启代理" />
+
+    <Button
+        android:id="@+id/stopVpn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭代理" />
+</LinearLayout>
